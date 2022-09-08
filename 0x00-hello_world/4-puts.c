@@ -3,11 +3,9 @@
 /**
  * main - print in the put function
  *
- * Description: using the main function
- * this program prints "Programming is like building a multilingual puzzle"
- * Return: 0
+ * Return: Always 0 (It is successful)
  */
-int main (void)
+int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
