@@ -1,1 +1,1 @@
-a repo for the c programming containg a lot
+C -More tasks on pointers, arrays and strings
