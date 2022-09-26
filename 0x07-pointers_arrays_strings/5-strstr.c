@@ -20,8 +20,8 @@ char *_strstr(char *haystack, char *needle)
 			if (haystack[a + b] != needle[b])
 				break;
 		}
-		if (!needle[j])
-			return (&haystack[b])
+		if (!needle[b])
+			return (&haystack[a])
 	}
 }
 
