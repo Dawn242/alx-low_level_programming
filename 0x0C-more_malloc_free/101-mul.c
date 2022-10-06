@@ -139,10 +139,11 @@ int main(int argc, char *argv[])
 			for (ki = 0; e[ki]; ki++)
 				_putchar(e[ki]);
 			free(b);
-			free(k);
 			exit(98);
 		}
 	}
+	_putchar('\n');
+
 	_print(b, fn - 1);
 	return (0);
 }
