@@ -38,7 +38,7 @@ void _print(char *str, int l)
  */
 char *mul(char n, char *num, int  num_index, char *dest, int dest_index)
 {
-	int g, h, mul, mulrem, add addrem;
+	int g, h, mul, mulrem, add, addrem;
 
 	mulrem = addrem = 0;
 	for (g = num_index, h = dest_index; g >= 0; g--, h--)
@@ -49,7 +49,7 @@ char *mul(char n, char *num, int  num_index, char *dest, int dest_index)
 		addrem = add / 10;
 		dest[h] = add % 10 + '0';
 	}
-	for (addrem += mulrem; k >= 0 && addrem; h--)
+	for (addrem += mulrem; h >= 0 && addrem; h--)
 	{
 		add = (dest[h] - '0') + addrem;
 		addrem = add / 10;
@@ -95,7 +95,7 @@ void init(char *str, int l)
 
 	for (a = 0; a < l; a++)
 		str[a] = '0';
-	str[a] = '\0'
+	str[a] = '\0';
 }
 
 /**
@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 	int f1, f2, fn, ki, i;
 	char *b;
 	char *k;
-	char e[] = "Error\n"
+	char e[] = "Error\n";
 
 	if (argc != 3 || check_for_digits(argv))
 	{
@@ -124,7 +124,7 @@ int main(int argc, char *argv[])
 		;
 	fn = f1 + f2 + 1;
 	b = malloc(fn * sizeof(char));
-	if (a == NULL)
+	if (b == NULL)
 	{
 		for (ki = 0; e[ki]; ki++)
 			_putchar(e[ki]);
