@@ -1,7 +1,5 @@
-fndef MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
-
-#include <stdlib.h>
 
 void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
@@ -13,4 +11,4 @@ int _atoi(const char *s);
 void print_int(unsigned long int n);
 void _puts(char *str);
 
-#endif
+#endif /*MAIN_H*/
