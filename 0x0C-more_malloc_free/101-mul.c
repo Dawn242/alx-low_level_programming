@@ -95,7 +95,7 @@ void init(char *str, int l)
 
 	for (a = 0; a < l; a++)
 		str[a] = '0';
-	str[a] = '0'
+	str[a] = '0';
 }
 
 /**
