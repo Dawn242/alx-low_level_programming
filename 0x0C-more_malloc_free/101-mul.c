@@ -15,7 +15,7 @@ void _print(char *str, int l)
 	a = b = 0;
 	while (a < l)
 	{
-		if (str[a] != '\0')
+		if (str[a] != '0')
 			b = 1;
 		if (b || a == l - 1)
 			_putchar(str[a]);
@@ -36,24 +36,24 @@ void _print(char *str, int l)
  *
  * Return: pointer to dest or NULL if fail
  */
-char *mul(char n, char *num, int  num_index, char *dest, int dest_index)
+char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
 	int g, h, mul, mulrem, add, addrem;
 
 	mulrem = addrem = 0;
 	for (g = num_index, h = dest_index; g >= 0; g--, h--)
 	{
-		mul = (n - '\0') * (num[g] - '\0') + mulrem;
+		mul = (n - '0') * (num[g] - '0') + mulrem;
 		mulrem = mul / 10;
-		add = (dest[h] - '\0') + (mul % 10) + addrem;
+		add = (dest[h] - '0') + (mul % 10) + addrem;
 		addrem = add / 10;
-		dest[h] = add % 10 + '\0';
+		dest[h] = add % 10 + '0';
 	}
 	for (addrem += mulrem; h >= 0 && addrem; h--)
 	{
-		add = (dest[h] - '\0') + addrem;
+		add = (dest[h] - '0') + addrem;
 		addrem = add / 10;
-		dest[h] = add % 10 + '\0';
+		dest[h] = add % 10 + '0';
 	}
 	if (addrem)
 	{
@@ -75,7 +75,7 @@ int check_for_digits(char **av)
 	{
 		for (b = 0; av[a][b]; b++)
 		{
-			if (av[a][b] < '\0' || av[a][b] > '9')
+			if (av[a][b] < '0' || av[a][b] > '9')
 				return (1);
 		}
 	}
@@ -94,8 +94,8 @@ void init(char *str, int l)
 	int a;
 
 	for (a = 0; a < l; a++)
-		str[a] = '\0';
-	str[a] = '\0';
+		str[a] = '0';
+	str[a] = '0'
 }
 
 /**
