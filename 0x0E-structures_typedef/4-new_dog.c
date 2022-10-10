@@ -10,14 +10,14 @@
 int _strlen(char *s)
 {
 	int i;
-	
+
 	i = 0;
-	
+
 	while (s[i] != '\0')
 	{
 		i++;
 	}
-	
+
 	return (i);
 }
 
@@ -30,23 +30,23 @@ int _strlen(char *s)
  *
  * Return: the pointer to dest
  */
-char *_strcpy(char *dest, cha *src)
+char *_strcpy(char *dest, char *src)
 {
 	int lent, a;
-	
+
 	lent = 0;
-	
+
 	while (src[lent] != '\0')
 	{
 		lent++;
 	}
-	
+
 	for (a = 0; a < lent; a++)
 	{
 		dest[a] = src[a];
 	}
 	dest[a] = '\0';
-	
+
 	return (dest);
 }
 
@@ -62,14 +62,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ddog;
 	int lent1, lent2;
-	
+
 	lent1 = _strlen(name);
 	lent2 = _strlen(owner);
-	
+
 	ddog = malloc(sizeof(dog_t));
 	if (ddog == NULL)
 		return (NULL);
-	
+
 	ddog->name = malloc(sizeof(char) * (lent1 + 1));
 	if (ddog->name == NULL)
 	{
